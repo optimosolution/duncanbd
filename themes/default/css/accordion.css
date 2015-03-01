@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+.urbangreymenu {
+	width: 140px; /*width of menu*/
+	margin-top:88px;
+}
+.urbangreymenu .accordionHead {
+	font: bold 11px Arial,Helvetica,sans-serif;
+	color: #000000;
+	background:#606060 url(../images/left_menu_btn.jpg) no-repeat top; /*last 2 values are the x and y coordinates of bullet image*/
+	margin-bottom: 5px; /*bottom spacing between header and rest of content*/
+	text-transform:capitalize;
+        padding:6px 0 8px 10px;
+	width:138px;
+	height:12px;
+}
+.urbangreymenu .accordionHead:hover {
+	font: bold 11px Arial,Helvetica,sans-serif;
+	color: #000000;
+	background:#606060 url(../images/left_menu_btn.jpg) no-repeat bottom; /*last 2 values are the x and y coordinates of bullet image*/
+	margin-bottom: 5px; 	
+	padding:6px 0 8px 10px;
+	text-transform:capitalize;
+	width:138px;
+	height:12px;
+}
+.urbangreymenu .accordionHead a {
+	text-decoration: none;
+	color: #666666;
+	display: block;
+	margin-left:-5px;
+	border:0px solid red;
+	
+}
+.separator{
+	text-decoration: none;
+	color: #666666;
+	display: block;
+	margin-left:-5px;
+	border:0px solid red;
+	
+}
+.urbangreymenu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 0; /*bottom spacing between each UL and rest of content*/
+
+}
+.urbangreymenu ul li {
+	padding-bottom: 2px; /*bottom spacing between menu items*/
+
+}
+.urbangreymenu ul.submenu li {
+	list-style-type: none;
+}
+.urbangreymenu ul li a {
+
+	font: normal 11px Arial,Helvetica,sans-serif;
+	color: #666666;
+	background: #ffffff;
+	display: block;
+	padding: 0px 0;
+	line-height: 17px;
+	padding-left: 0px; /*link text is indented 8px*/
+	text-decoration: none;
+
+}
+.urbangreymenu ul li a:hover { /*hover state CSS*/
+	color:#000;
+	background:#ffffff;
+}
+ul.f2cnoshow, ul.f2cnoshow li, ul.f2cnoshow li a {
+	display:none !important;
+	height:0 !important;
+	position:absolute !important;
+	left:-10000px !important;
+}

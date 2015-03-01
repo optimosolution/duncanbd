@@ -244,4 +244,13 @@ class BannerCategory extends CActiveRecord {
         return $option;
     }
 
+    public static function get_title($id) {
+        $value = BannerCategory::model()->findByAttributes(array('id' => $id));
+        if (empty($value->title)) {
+            return null;
+        } else {
+            return $value->title;
+        }
+    }
+
 }

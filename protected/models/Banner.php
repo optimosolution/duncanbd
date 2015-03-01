@@ -154,4 +154,32 @@ class Banner extends CActiveRecord {
         return $returnValue;
     }
 
+    public static function get_gallery_thumb($catid) {
+        $returnValue = Yii::app()->db->createCommand()
+                ->select('banner')
+                ->from('{{banner}}')
+                ->where('catid=:catid', array(':catid' => $catid))
+                ->queryScalar();
+        if (empty($returnValue)) {
+            return CHtml::image(Yii::app()->baseUrl . '/uploads/banners/default.jpg', 'Picture', array('alt' => 'Picture', 'class' => 'img-rounded', 'style' => 'width:50px;'));
+        } else {
+            $filePath = Yii::app()->basePath . '/../uploads/banners/' . $returnValue;
+            if ((is_file($filePath)) && (file_exists($filePath))) {
+                return CHtml::image(Yii::app()->baseUrl . '/uploads/banners/' . $returnValue, 'Picture', array('alt' => 'Picture', 'class' => 'img-rounded', 'style' => 'width:50px;'));
+            } else {
+                return CHtml::image(Yii::app()->baseUrl . '/uploads/banners/default.jpg', 'Picture', array('alt' => 'Picture', 'class' => 'img-rounded', 'style' => 'width:50px;'));
+            }
+        }
+        return $returnValue;
+    }
+
+    public static function get_total($catid) {
+        $total = Yii::app()->db->createCommand()
+                ->select('COUNT(*)')
+                ->from('{{banner}}')
+                ->where('catid=:catid', array(':catid' => $catid))
+                ->queryScalar();
+        return $total;
+    }
+
 }

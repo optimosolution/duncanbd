@@ -1,0 +1,82 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 150px;
+    color: #000000;
+    /*font-family: Tahoma, Arial, Helvetica, sans-serif;*/
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    background: #EEEEEE ;
+    font-size: 110%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 150px;
+    background-color: #EEEEEE;
+}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.container {
+    width: auto;
+    max-width: 990px;
+    padding: 0 15px;
+}
+.container .body-background{
+    background:url(../images/content_swd.jpg) repeat-y;
+    background-color: #FFF;
+    padding: 0px 10px 20px 10px;
+    /*height:77vh;*/
+}
+.footer-top-border{
+    border: 3px solid #ffc000;
+    width: 100%;
+}
+.container .footer-top{
+    margin: 20px 0;
+    font-size: 11px;
+}
+.footer-bottom{
+    width: 100%; 
+    background-color: #E4E4E4;
+    font-size: 11px;
+    vertical-align: middle;
+}
+.container .camellia{
+    margin-top: 7px;
+}
+.container a.link-text-color:link, a.link-text-color:visited{
+    color:#8ebc11;
+    text-decoration: none;
+}
+.container a.link-text-color:hover{
+    color:#666666;
+    text-decoration: none;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+.nav > li > a:link, a:visited {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding: 5px 15px;
+    position: relative;
+    text-align: left;
+    color: #555;
+}
+.nav > li > a:hover {
+    background-color: #E2DDBF;  
+    color: #333;
+}
+.submenue-left{
+    margin-left: 15px;
+}

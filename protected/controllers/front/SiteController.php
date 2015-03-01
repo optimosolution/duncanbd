@@ -53,8 +53,8 @@ class SiteController extends Controller {
      */
     public function actionIndex() {
         $this->pageTitle = Yii::app()->name;
-        Yii::app()->clientScript->registerMetaTag(Yii::app()->name . ' - Site description.', 'description');
-        Yii::app()->clientScript->registerMetaTag("keywords,here", 'keywords');
+        Yii::app()->clientScript->registerMetaTag('Duncan Brothers (Bangladesh) Limited', 'description');
+        Yii::app()->clientScript->registerMetaTag("Duncan, Tea, Rubber, Camellia Plc., Bottled water, Natural Mineral Water, Best tea in Bangladesh, Tea producers in Bangladesh, Rubber producers in Bangladesh, Ribbed Smoked Sheets, RSS, Bangladesh RSS Producers, United Leasing, Leasing companies in Bangladesh, United Insurance, Insurance companies in Bangladesh, Orchid, Orchid producers in Bangladesh, Chittagong Warehouse, CWL, Tea Warehousing in Bangladesh, CSR, Corporate Social Responsibility", 'keywords');
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
         $this->render('index');
