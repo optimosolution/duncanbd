@@ -6,7 +6,7 @@ html {
 }
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 150px;
+    margin-bottom: 140px;
     color: #000000;
     /*font-family: Tahoma, Arial, Helvetica, sans-serif;*/
     font-family:Verdana, Arial, Helvetica, sans-serif;
@@ -19,7 +19,7 @@ body {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 150px;
+    height: 140px;
     background-color: #EEEEEE;
 }
 /* Custom page CSS
@@ -34,6 +34,7 @@ body {
     background:url(../images/content_swd.jpg) repeat-y;
     background-color: #FFF;
     padding: 0px 10px 20px 10px;
+    min-height: 100%;
     /*height:77vh;*/
 }
 .footer-top-border{
@@ -79,4 +80,5 @@ body {
 }
 .submenue-left{
     margin-left: 15px;
+    font-weight: normal;
 }

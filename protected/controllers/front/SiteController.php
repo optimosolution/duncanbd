@@ -76,7 +76,6 @@ class SiteController extends Controller {
      * Displays the contact page
      */
     public function actionContact() {
-        $this->layout = 'column2';
         $model = new ContactForm;
         if (isset($_POST['ContactForm'])) {
             $model->attributes = $_POST['ContactForm'];

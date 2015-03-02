@@ -11,7 +11,7 @@ $array = BannerCategory::model()->findAll(
         ));
 foreach ($array as $key => $value) {
     ?>
-    <div class="row">
+    <div class="row" style="margin-bottom: 5px;">
         <div class="col-sm-2">
             <?php echo Banner::get_gallery_thumb($value['id']); ?>
         </div>

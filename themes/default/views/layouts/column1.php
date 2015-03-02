@@ -17,13 +17,15 @@
                     <li><?php echo CHtml::link('Home', array('site/index'), array('class' => 'btn btn-xs btn-warning')); ?></li>
                     <li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false" class="btn btn-xs btn-warning">About Duncan</a>
                         <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                            <li><?php echo CHtml::link('About Duncan ', array('content/view', 'id' => 2), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('History of Duncan', array('content/view', 'id' => 3), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('Camellia PLC', array('content/view', 'id' => 4), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('Lawrie Group', array('content/view', 'id' => 5), array('class' => '')); ?></li>
                         </ul>
                     </li>
-                    <li><a href="#" id="btn-2" data-toggle="collapse" data-target="#submenu2" aria-expanded="false" class="btn btn-xs btn-warning">Products</a>
+                    <li><a href="#" id="btn-2" data-hover="dropdown" data-toggle="collapse" data-target="#submenu2" aria-expanded="false" class="btn btn-xs btn-warning">Products</a>
                         <ul class="nav collapse" id="submenu2" role="menu" aria-labelledby="btn-2">
+                            <li><?php echo CHtml::link('Products', array('content/view', 'id' => 6), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('Tea', array('content/view', 'id' => 7), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('Production', array('content/view', 'id' => 8), array('class' => 'submenue-left')); ?></li>
                             <li><?php echo CHtml::link('Garden', array('content/view', 'id' => 9), array('class' => 'submenue-left')); ?></li>
@@ -37,6 +39,7 @@
                     </li>
                     <li><a href="#" id="btn-3" data-toggle="collapse" data-target="#submenu3" aria-expanded="false" class="btn btn-xs btn-warning">Corporate Responsibility</a>
                         <ul class="nav collapse" id="submenu3" role="menu" aria-labelledby="btn-3">
+                            <li><?php echo CHtml::link('Responsibility', array('content/view', 'id' => 14), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('Primary Health Care', array('content/view', 'id' => 15), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('CDF Hospital', array('content/view', 'id' => 16), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('CDF School', array('content/view', 'id' => 17), array('class' => '')); ?></li>
@@ -48,6 +51,7 @@
                     </li>        
                     <li><a href="#" id="btn-4" data-toggle="collapse" data-target="#submenu4" aria-expanded="false" class="btn btn-xs btn-warning">Associate companies</a>
                         <ul class="nav collapse" id="submenu4" role="menu" aria-labelledby="btn-4">
+                            <li><?php echo CHtml::link('Associate Companies', array('content/view', 'id' => 22), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('Duncan Products Ltd.', array('content/view', 'id' => 23), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('CWL', array('content/view', 'id' => 24), array('class' => '')); ?></li>
                             <li><?php echo CHtml::link('Octavius', array('content/view', 'id' => 25), array('class' => '')); ?></li>
@@ -59,41 +63,7 @@
                     <li><?php echo CHtml::link('Gallery', array('gallery/index'), array('class' => 'btn btn-xs btn-warning')); ?></li>
                     <li><?php echo CHtml::link('Contact Us', array('site/contact'), array('class' => 'btn btn-xs btn-warning')); ?></li>
                 </ul>
-            </nav>
-            <!--            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Home
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-            
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            About Duncan
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-                                        <ul class="list-unstyled">
-                                            <li><?php //echo CHtml::link('History of Duncan', array('content/view', 'id' => 2), array('class' => ''));                ?></li>
-                                            <li><?php //echo CHtml::link('Camellia PLC', array('content/view', 'id' => 2), array('class' => ''));                ?></li>
-                                            <li><?php //echo CHtml::link('Lawrie Group', array('content/view', 'id' => 2), array('class' => ''));                ?></li>                                        
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+            </nav>            
         </div>
         <div class="col-md-7">
             <?php echo $content; ?>

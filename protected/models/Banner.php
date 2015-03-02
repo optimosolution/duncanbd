@@ -182,4 +182,15 @@ class Banner extends CActiveRecord {
         return $total;
     }
 
+    public static function get_scroll() {
+        $array = Banner::model()->findAll(array('condition' => 'published=1'));
+        foreach ($array as $key => $value) {
+            $filePath = Yii::app()->basePath . '/../uploads/banners/' . $value['banner'];
+            if ((is_file($filePath)) && (file_exists($filePath))) {
+                $image = CHtml::image(Yii::app()->baseUrl . '/uploads/banners/' . $value['banner'], 'Picture', array('alt' => 'Picture', 'class' => 'img-rounded', 'style' => 'height:50px;margin-right:2px;'));
+                echo CHtml::link($image, Yii::app()->baseUrl . '/uploads/banners/' . $value['banner'], array('class' => 'lytebox', 'data-title' => $value['name'], 'data-lyte-options' => 'group:' . $value['catid']));
+            }
+        }
+    }
+
 }

@@ -1,0 +1,13 @@
+2015/03/02 12:21:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/admin/css/styles.css".' in D:\xampp\htdocs\framework\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\framework\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/admin/cs...')
+#1 D:\xampp\htdocs\framework\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\duncanbd\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('front')
+#4 D:\xampp\htdocs\framework\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\duncanbd\index.php(14): CComponent->__call('runEnd', Array)
+#6 D:\xampp\htdocs\duncanbd\index.php(14): CWebApplication->runEnd('front')
+#7 {main}
+REQUEST_URI=/duncanbd/themes/admin/css/styles.css
+HTTP_REFERER=http://localhost/duncanbd/backend.php?r=site/logout
+---

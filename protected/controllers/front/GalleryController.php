@@ -119,8 +119,10 @@ class GalleryController extends Controller {
         ));
     }
 
-    public function actionCategory() {
-        $dataProvider = new CActiveDataProvider('Banner');
+    public function actionCategory($id) {
+        $criteria = new CDbCriteria;
+        $criteria->condition = 'catid=' . $id;
+        $dataProvider = new CActiveDataProvider('Banner', array('criteria' => $criteria, 'pagination' => false,));
         $this->render('category', array(
             'dataProvider' => $dataProvider,
         ));
