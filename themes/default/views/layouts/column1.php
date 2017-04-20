@@ -39,25 +39,22 @@
                     </li>
                     <li><a href="#" id="btn-3" data-toggle="collapse" data-target="#submenu3" aria-expanded="false" class="btn btn-xs btn-warning">Corporate Responsibility</a>
                         <ul class="nav collapse" id="submenu3" role="menu" aria-labelledby="btn-3">
-                            <li><?php echo CHtml::link('Responsibility', array('content/view', 'id' => 14), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('Primary Health Care', array('content/view', 'id' => 15), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('CDF Hospital', array('content/view', 'id' => 16), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('CDF School', array('content/view', 'id' => 17), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('CDF Orchid Project', array('content/view', 'id' => 18), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('Yasser Life Guard', array('content/view', 'id' => 19), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('Environment', array('content/view', 'id' => 20), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('Other Social Commitments', array('content/view', 'id' => 21), array('class' => '')); ?></li>                            
+                            <?php
+                            $CorporateResponsibility = Content::model()->findAll(array('condition' => 'catid=7', 'order' => 'ordering'));
+                            foreach ($CorporateResponsibility as $key => $value) {
+                                echo '<li>' . CHtml::link(Content::get_title($value['id']), array('content/view', 'id' => $value['id']), array('class' => '')) . '</li>';
+                            }
+                            ?>                            
                         </ul>
                     </li>        
                     <li><a href="#" id="btn-4" data-toggle="collapse" data-target="#submenu4" aria-expanded="false" class="btn btn-xs btn-warning">Associate companies</a>
                         <ul class="nav collapse" id="submenu4" role="menu" aria-labelledby="btn-4">
-                            <li><?php echo CHtml::link('Associate Companies', array('content/view', 'id' => 22), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('Duncan Products Ltd.', array('content/view', 'id' => 23), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('CWL', array('content/view', 'id' => 24), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('Octavius', array('content/view', 'id' => 25), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('Duncan Properties Ltd', array('content/view', 'id' => 26), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('UIC', array('content/view', 'id' => 27), array('class' => '')); ?></li>
-                            <li><?php echo CHtml::link('ULC', array('content/view', 'id' => 28), array('class' => '')); ?></li>
+                            <?php
+                            $AssociateCompanies = Content::model()->findAll(array('condition' => 'catid=8', 'order' => 'ordering'));
+                            foreach ($AssociateCompanies as $key => $value) {
+                                echo '<li>' . CHtml::link(Content::get_title($value['id']), array('content/view', 'id' => $value['id']), array('class' => '')) . '</li>';
+                            }
+                            ?>
                         </ul>
                     </li>
                     <li><?php echo CHtml::link('Gallery', array('gallery/index'), array('class' => 'btn btn-xs btn-warning')); ?></li>
@@ -69,7 +66,6 @@
             <?php echo $content; ?>
         </div>
         <div class="col-md-2">
-
         </div>
     </div>
 </div>
